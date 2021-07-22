@@ -1,0 +1,12 @@
+﻿<Window x:Class="HelloWorldWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWorldWPF"
+        mc:Ignorable="d"
+        Title="Mon premier programme WPF" Height="450" Width="800">
+    <Canvas>
+        <TextBlock Text="Hello World !" Height="137.869" Width="407.48" Canvas.Left="194.671" Canvas.Top="93.103" FontWeight="Bold" FontSize="48" FontFamily="Snap ITC" />
+    </Canvas>
+</Window>

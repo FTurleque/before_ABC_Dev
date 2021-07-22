@@ -1,0 +1,183 @@
+﻿<Window x:Class="NombreMystereWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NombreMystereWPF"
+        mc:Ignorable="d"
+        Title="Le nombre Mystère" Height="518" Width="525" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Window.Resources>
+        <Color x:Key="Magenta">#FF9302A9</Color>
+        <Color x:Key="Blanc">White</Color>
+        <Color x:Key="Canari">#FFFFC603</Color>
+        <Color x:Key="Bleu">#FF329DFF</Color>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonValider" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="200">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="99"/>
+                                <ColumnDefinition Width="101"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="70" Stroke="Black" VerticalAlignment="Stretch" Width="70" Grid.Column="1" Grid.ColumnSpan="1"/>
+                            <ContentPresenter Grid.ColumnSpan="1" Height="Auto" VerticalAlignment="Center" Width="Auto" HorizontalAlignment="Right" Margin="0,0,15,0"/>
+                            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="&#xE001;" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" FontSize="48" Grid.Column="1">
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{DynamicResource Magenta}"/>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true"/>
+                            <Trigger Property="IsMouseOver" Value="true"/>
+                            <Trigger Property="IsPressed" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonNPartie" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="200">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="99"/>
+                                <ColumnDefinition Width="101"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse HorizontalAlignment="Stretch" Height="70" Stroke="Black" VerticalAlignment="Stretch" Width="70" Grid.Column="1" Grid.ColumnSpan="1">
+                                <Ellipse.Fill>
+                                    <SolidColorBrush Color="{DynamicResource Canari}"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <ContentPresenter Grid.ColumnSpan="1" Height="Auto" VerticalAlignment="Center" Width="Auto" HorizontalAlignment="Right" Margin="0,0,15,0"/>
+                            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="&#xE149;" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" FontSize="36" Grid.Column="1">
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{DynamicResource Blanc}"/>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true"/>
+                            <Trigger Property="IsMouseOver" Value="true"/>
+                            <Trigger Property="IsPressed" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="Base" Margin="12">
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource Bleu}"/>
+        </Grid.Background>
+        <StackPanel>
+
+            <StackPanel x:Name="Logo" Height="80" Margin="0" d:IsLocked="True">
+                <StackPanel.Background>
+                    <SolidColorBrush Color="{DynamicResource Magenta}"/>
+                </StackPanel.Background>
+                <TextBlock TextWrapping="Wrap" Text="Le chiffre" FontSize="36" TextAlignment="Right" Foreground="White" Margin="0,24,15,0"/>
+                <Rectangle x:Name="SeparateurBlanc" Height="5" Margin="0,-12,0,0">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{DynamicResource Blanc}"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle x:Name="SeparateurJaune" Height="12" Margin="0,-4,0,0">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{DynamicResource Canari}"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </StackPanel>
+            <Grid x:Name="Pitch" Height="37.24" Margin="15,0,0,0" d:IsLocked="True">
+
+                <TextBlock x:Name="Pitch1" Text="J'ai choisi un nombre entre 1 et 20." Margin="0,0,0,18.62" FontSize="14" >
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{DynamicResource Blanc}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <TextBlock x:Name="Pitch2" Text="Trouve le :" Margin="0,18.62,0,0" FontSize="14" >
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{DynamicResource Blanc}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </Grid>
+            <Grid x:Name="Chiffre" Height="140" Margin="0,10,0,0" d:IsLocked="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="248"/>
+                    <ColumnDefinition Width="247"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Name="InfoSP" VerticalAlignment="Center">
+                    <TextBlock x:Name="textBlockInfo" TextAlignment="Right" Margin="0,0,15,0" FontSize="16" >
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource Blanc}"/>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBlock x:Name="textBlockNbEssai" Text="Nb d'essais : 0" TextAlignment="Right" Margin="0,0,15,0" >
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource Blanc}"/>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                </StackPanel>
+                <Ellipse HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="140" Grid.Column="1" Margin="15,0,0,0">
+                    <Ellipse.Fill>
+                        <SolidColorBrush Color="{DynamicResource Blanc}" Opacity="0.3"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBox x:Name="textBoxEssai" Grid.Column="1" VerticalAlignment="Center" Width="100" FontSize="60" HorizontalAlignment="Left" Margin="35,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" TextAlignment="Center" >
+                    <TextBox.Foreground>
+                        <SolidColorBrush Color="{DynamicResource Blanc}"/>
+                    </TextBox.Foreground>
+                </TextBox>
+            </Grid>
+            <Button x:Name="btnValider" Content="Valider" Click="btnValider_Click" Height="70" Width="200" Style="{DynamicResource ButtonValider}" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" Margin="0,15,0,0">
+                <Button.Foreground>
+                    <SolidColorBrush Color="{DynamicResource Magenta}"/>
+                </Button.Foreground>
+            </Button>
+            <Button x:Name="btnNouvellePartie" Content="Nouvelle Partie" Click="btnNouvellePartie_Click" Style="{DynamicResource ButtonNPartie}" Width="200" HorizontalAlignment="Left" Margin="100,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Button.Foreground>
+                    <SolidColorBrush Color="{DynamicResource Blanc}"/>
+                </Button.Foreground>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
