@@ -1,0 +1,91 @@
+/*Reset CSS*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Menu 1 */
+#menu1 {
+    display: flex;              /* Transformation en flexbox */
+    padding:0;                  /* Suppression des marges internes */
+    background-color: #ccc;     /* Ajout de la couleur d'arrière-plan */
+    justify-content: center     /* Alignements des liens dans le menu */
+}
+
+#menu1 li {
+    list-style-type: none ;       /* Suppression des puces */
+}
+
+#menu1 a {
+    display:block;                /* Transformation en block */
+    min-width: 120px;             /* Largeur minimale des liens */
+
+    margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+    padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+    text-align: center;           /* Centrage du texte */   
+    background-color: #1ABC9C;    /* Couleur d'arrière-plan */
+    color: #fff;                  /* Couleur du texte */
+    text-decoration: none;        /* Suppression du soulignement */
+    border: 1px solid #fff;       /* Ajout d'une bordure */
+    border-radius: 4px;           /* Arrondis des bordures */
+
+    transition: all 1s ;          /* Ajout des effets de transition */
+}
+
+#menu1 a.actif {
+    background-color: #000 ; 
+    color: #1ABC9C ;
+    border-color: #1ABC9C ;
+}
+
+#menu1 a:hover, #menu1 a:hover.actif {      /* Survole des liens */
+    background-color: #ed2794;
+    color: #ffe843;
+    border-color: #ffe843;
+}
+
+/* Menu 2 */
+#menu2 {
+    width: 100%;
+    margin: 0 auto;
+    /* Pour centrer le menu, on pourra appliquer une largeur explicite à l’élément nav ainsi que margin : 0 auto */
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+#menu2 li {
+    list-style-type: none;
+    float: left;  /* Aucun espace entre les element de la liste Ou display: inline-block; pour l'alignement */
+    width: 25%;
+    text-align: center;
+}
+
+#menu2 ul::after {     /* ::after que nous allons appliquer à la liste en soi pour éviter que sa hauteur ne soit nulle */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#menu2 a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid transparent;     /* En ajoutant une bordure transparente on enleve le deplacement du au soullignement dans le :hover */
+    padding: 10px 0;
+}
+
+#menu2 a:hover {
+    color: orange;
+    border-bottom: 2px solid gold;
+    /* en ajoutant une bordure durant l’état :hover, 
+    la hauteur de l’élément est modifiée de la taille de la bordure et 
+    cela va faire bouger les différents contenus sous le menu. */
+}
+
+p {
+    height: 2000px;
+    margin: 15px;
+    text-align: justify;
+}

@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap'); /* font-family: 'Frijole', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Frijole&family=Knewave&family=Potta+One&display=swap'); /* font-family: 'Potta One', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Knewave&display=swap'); /* font-family: 'Knewave', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Frijole&family=Knewave&family=Permanent+Marker&family=Potta+One&display=swap'); /* font-family: 'Permanent Marker', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Frijole&family=Knewave&display=swap'); /* font-family: 'Chewy', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap'); /* font-family: 'Love Ya Like A Sister', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Marck+Script&display=swap'); /* font-family: 'Marck Script', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Marck+Script&family=Nanum+Pen+Script&display=swap'); /* font-family: 'Nanum Pen Script', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Marck+Script&family=Nanum+Pen+Script&family=Patrick+Hand&display=swap'); /* font-family: 'Patrick Hand', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Love+Ya+Like+A+Sister&family=Marck+Script&family=Nanum+Pen+Script&family=Patrick+Hand&display=swap'); /* font-family: 'Caveat', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@600&family=Love+Ya+Like+A+Sister&family=Marck+Script&family=Nanum+Pen+Script&family=Patrick+Hand&display=swap'); /* font-family: 'Architects Daughter', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@600&family=Indie+Flower&family=Love+Ya+Like+A+Sister&family=Marck+Script&family=Nanum+Pen+Script&family=Patrick+Hand&display=swap'); /* font-family: 'Indie Flower', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@600&family=Indie+Flower&family=Love+Ya+Like+A+Sister&family=Marck+Script&family=Nanum+Pen+Script&family=New+Tegomin&family=Patrick+Hand&display=swap'); /* font-family: 'New Tegomin', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@600&family=Indie+Flower&family=Love+Ya+Like+A+Sister&family=Marck+Script&family=Nanum+Pen+Script&family=New+Tegomin&family=Patrick+Hand&family=Walter+Turncoat&display=swap'); /* font-family: 'Walter Turncoat', cursive; */
+
+/* Paramètre Globaux */
+
+html, body {
+    background: url(background/night-sky-569319.jpg) rgb(165, 164, 170) no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    width: auto;
+    height: 170px;
+    margin: 15px;
+}
+
+.media {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+#top {
+    width: 100%;
+}
+
+/* Bouton retractation barre rétractable */
+.toogle_btn {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    float: right;
+    margin-right: -40px;
+    margin-top: -45px;
+    cursor: pointer;
+}
+
+.toogle_btn span {
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.toogle_btn span::before {
+    content: '';
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.toogle_btn span::after {
+    content: '';
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.bar_retract_close {
+    margin-left: -250px;
+    transition-duration: .2s;
+}
+
+/* Classement par genre */
+.bar_retract {
+    width: 250px;
+    background: rgb(41, 39, 39);
+    padding-top: 55px;
+    transition-duration: .2s;
+    z-index: 1;
+}
+
+#classement_menu a {
+    display: flex;
+    font-family: 'Caveat', cursive;
+    color: azure;
+    /*
+    font-family: 'Walter Turncoat', cursive;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Patrick Hand', cursive;
+    font-family: 'New Tegomin', serif;
+    font-family: 'Marck Script', cursive;
+    ***************************************
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-family: 'Caveat', cursive;
+    */
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    line-height: 13.7rem;
+}
+
+#classement_menu::after, .carousel__container {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+#classement_menu a:hover {
+    color: red;
+}
+
+#top {
+    margin-right: 40px;
+}
+
+/* Séléction Films ou Séries */
+#top_bar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 45px;
+}
+
+#top_bar_media, .container__slider {
+    display: flex;
+}
+
+button {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+}
+
+.container__slider {
+    background-color: rgb(41, 39, 39);
+    margin: 15px;
+}
+
+.item {
+    box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
+    transition: transform 0.3s;
+    transform: translate3d(0, -1px, 0);
+}
+
+.item:hover {
+    transform: translate3d(0, -10px, 0);
+}
+
+footer {
+    padding-bottom: 100px;
+}
+
+/*******************NAVIGATION**************************/ 
+
+/* Barre de navigation fixe en bas */
+#nav_menu {
+    background-color: rgb(41, 39, 39);
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+
+#menu, #user {
+    display: flex;
+    background-color: #a87777;
+    border-radius: 25px;
+    padding: 10px 0;
+}
+
+#menu li, #user li {
+    list-style-type: none;
+}
+
+#menu li a, #user li a {
+    text-decoration: none !important;
+    font-family: 'Permanent Marker', cursive;
+    /*
+    font-family: 'Chewy', cursive;
+    font-family: 'Frijole', cursive;
+    font-family: 'Knewave', cursive;
+    font-family: 'Potta One', cursive;
+    */
+    color: #000000;
+    font-size: 25px;
+    padding: 14px 25px;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+    
+}
+
+
+
+/*************************CAROUSEL***************************/
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+}
+
+.carousel__container {
+    transition: transform 0.3s;
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel__item {
+    float: left;
+}
+
+/**********************BOUTONS-CAROUSEL********************/
+
+.carousel__next, .carousel__prev {
+    position: absolute;
+    width: 40px;
+    height: 204px;
+    background: #FFF url(right.svg) center center no-repeat;
+    background-size: 20px 20px;
+    top: 0;
+    right: -20px;
+    box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.carousel__next:hover, .carousel__prev:hover {
+    transform: scale(1.2);
+}
+
+.carousel__prev {
+    background-image: url(left.svg);
+    right: auto;
+    left: 5px;
+}
+
+.carousel__next--hidden, .carousel__prev--hidden {
+    opacity: 0;
+    cursor: auto;
+}
+

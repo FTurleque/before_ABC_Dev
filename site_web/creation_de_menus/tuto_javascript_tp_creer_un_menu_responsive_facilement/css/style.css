@@ -1,0 +1,69 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.toogle_btn {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.toogle_btn span {
+    height: 3px;
+    background-color: #2c3e50;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.toogle_btn span::before {
+    content: '';
+    height: 3px;
+    background-color: #2c3e50;
+    width: 100%;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.toogle_btn span::after {
+    content: '';
+    height: 3px;
+    background-color: #2c3e50;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.menu {
+    height: 1000px;
+    background-color: #2c3e50;
+    width: 200px;
+}
+
+.menu a {
+    color: #ffffff;
+    font-family: sans-serif;
+    text-align: center;
+    display: block;
+    padding-top: 40px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav {
+    margin-left: -200px;
+    transition-duration: .2s;
+}
+
+.nav_open {
+    margin-left: 0;
+    transition-duration: .2s;
+}
