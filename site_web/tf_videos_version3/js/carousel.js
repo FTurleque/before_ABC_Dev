@@ -122,75 +122,75 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesToScroll: 3,
     })
 
-    new Carousel(document.querySelector('#annimation'), {
-        slidesVisible: 8,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#annimation'), {
+    //     slidesVisible: 8,
+    //     slidesToScroll: 3,
+    // })
 
-    new Carousel(document.querySelector('#aventure'), {
-        slidesVisible: 8,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#aventure'), {
+    //     slidesVisible: 8,
+    //     slidesToScroll: 3,
+    // })
 
-    new Carousel(document.querySelector('#comedie'), {
-        slidesVisible: 8,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#comedie'), {
+    //     slidesVisible: 8,
+    //     slidesToScroll: 3,
+    // })
 
-    new Carousel(document.querySelector('#drame'), {
-        slidesVisible: 8,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#drame'), {
+    //     slidesVisible: 8,
+    //     slidesToScroll: 3,
+    // })
 
-    new Carousel(document.querySelector('#famillial'), {
-        slidesVisible: 8,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#famillial'), {
+    //     slidesVisible: 8,
+    //     slidesToScroll: 3,
+    // })
 
-    new Carousel(document.querySelector('#fantastique'), {
-        slidesVisible: 6,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#fantastique'), {
+    //     slidesVisible: 6,
+    //     slidesToScroll: 3,
+    // })
     
-    new Carousel(document.querySelector('#guerre'), {
-        slidesVisible: 6,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#guerre'), {
+    //     slidesVisible: 6,
+    //     slidesToScroll: 3,
+    // })
     
-    new Carousel(document.querySelector('#histoire'), {
-        slidesVisible: 6,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#histoire'), {
+    //     slidesVisible: 6,
+    //     slidesToScroll: 3,
+    // })
     
-    new Carousel(document.querySelector('#horreur'), {
-        slidesVisible: 6,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#horreur'), {
+    //     slidesVisible: 6,
+    //     slidesToScroll: 3,
+    // })
     
-    new Carousel(document.querySelector('#musique'), {
-        slidesVisible: 6,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#musique'), {
+    //     slidesVisible: 6,
+    //     slidesToScroll: 3,
+    // })
     
-    new Carousel(document.querySelector('#science-fiction'), {
-        slidesVisible: 6,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#science-fiction'), {
+    //     slidesVisible: 6,
+    //     slidesToScroll: 3,
+    // })
     
-    new Carousel(document.querySelector('#telefilms'), {
-        slidesVisible: 6,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#telefilms'), {
+    //     slidesVisible: 6,
+    //     slidesToScroll: 3,
+    // })
 
-    new Carousel(document.querySelector('#thriller'), {
-        slidesVisible: 6,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#thriller'), {
+    //     slidesVisible: 6,
+    //     slidesToScroll: 3,
+    // })
 
-    new Carousel(document.querySelector('#western'), {
-        slidesVisible: 6,
-        slidesToScroll: 3,
-    })
+    // new Carousel(document.querySelector('#western'), {
+    //     slidesVisible: 6,
+    //     slidesToScroll: 3,
+    // })
 
 
 })
